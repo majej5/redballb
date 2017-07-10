@@ -164,6 +164,16 @@ for ( i = -90; i <= 270; i+=1){
 	redball.left = xOr + 50 * Math.cos (i * Math.PI /180);
 }
 }
+
+function bounce(){
+	for(i=0;i<5;i++){
+		up()
+		}
+	for(i=0;i<5;i++){
+		down();
+		}
+	}
+	
 var rightBorder = myCanvas.width - redball.width;
 
 function playerBounds() {
