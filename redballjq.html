@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+  div {
+    position: absolute;
+    left: 50px;
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+  }
+</style>
+</head>
+<body>
+<button id = "up">UP</button>
+
+<button id ="down">DOWN</button>
+
+<button id = "left">LEFT</button>
+
+<button id = "right">RIGHT</button>
+
+<button id ="northEast">NORTH EAST</button>
+
+<button id ="northWest">NORTH WEST</button>
+
+<button id ="southEast">SOUTH EAST</button>
+
+<button id ="southWest">SOUTH WEST</button>
+
+<button id ="sqr">SQUARE</button>
+
+<button id ="triangle">TRIANGLE</button>
+
+<button id ="oct">OCTAGON</button>
+
+<button id ="circ">CIRCLE</button>
+
+<div class = "redball">
+<img src="http://storage.googleapis.com/ics-redball/redball.jpg" alt="redball" id="redball">
+</div>
+
+</body>
+<script>
+
+$( "#right" ).click(function() {
+  $( ".redball" ).animate({ left: "+=50px" }, "slow" );
+});
+  
+$( "#left" ).click(function(){
+  $( ".redball" ).animate({ left: "-=50px" }, "slow" );
+});
+$( "#down" ).click(function() {
+  $( ".redball" ).animate({ "top": "+=50px" }, "slow" );
+});
+  
+$( "#up" ).click(function(){
+  $( ".redball" ).animate({ "top": "-=50px" }, "slow" );
+});
+
+
+$( "#northEast" ).click(function() {
+  $( ".redball" ).animate({ "left": "+=50px","top": "-=50px"  }, "slow" );
+});
+  
+$( "#northWest" ).click(function(){
+  $( ".redball" ).animate({ "left": "-=50px", "top": "-=50px"}, "slow" );
+});
+$( "#southEast" ).click(function() {
+  $( ".redball" ).animate({ "top": "+=50px", "left": "+=50px"}, "slow" );
+});
+  
+$( "#southWest" ).click(function(){
+  $( ".redball" ).animate({ "left": "-=50px","top": "+=50px" }, "slow" );
+});
+
+
+
+$( "#sqr" ).click(function() {
+  $( ".redball" )
+  .animate({ "left": "+=50px"}, "slow" )
+  .animate({"top": "+=50px"},"slow")
+  .animate({"left": "-=50px"},"slow")
+  .animate({"top": "-=50px"},"slow")
+});
+  
+$( "#triangle" ).click(function() {
+  $( ".redball" )
+  .animate({ "top": "+=50px", "left": "+=50px"}, "slow" )
+  .animate({ "left": "-=100px" },"slow")
+  .animate({ "left": "+=50px", "top": "-=50px"},"slow")
+});
+
+$( "#oct" ).click(function() {
+  $( ".redball" )
+  .animate({ "left": "+=50px"}, "slow" )
+  .animate({ "top": "+=50px", "left": "+=50px"}, "slow" )
+  .animate({"top": "+=50px"},"slow")
+  .animate({ "left": "-=50px","top": "+=50px" }, "slow" )
+  .animate({"left": "-=50px"},"slow")
+  .animate({ "left": "-=50px", "top": "-=50px"}, "slow" )
+  .animate({"top": "-=50px"},"slow")
+  .animate({ "left": "+=50px","top": "-=50px"  }, "slow" )
+});
+
+</script>
+</html>
+
+
+
